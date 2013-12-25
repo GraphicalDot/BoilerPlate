@@ -51,5 +51,10 @@ pip install flask-restful
 echo "Installing gunicorn and its dependicies"
 pip install gunicorn
 
+echo "\n\nInstalling supervisord  and its changing its configuration file for gunicorn\n\n"
+pip install supervisor
+echo_supervisord_conf > /etc/supervisord.conf
+cp /home/ubuntu
+
 
 
