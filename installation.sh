@@ -1,10 +1,14 @@
 #!/bin/bash
 
+
 echo "\n\nUpdating ubuntu packages list\n\n"
 sudo apt-get -y update
 
 echo "\n\nUpgrading packages\n\n"
 sudo apt-get -y upgrade
+
+echo "\n\nMaking application logs directory which will have the related logs for all the applications running\n\n"
+sudo mkdir /applogs
 
 echo "\n\nInstalling ipython\n\n"
 sudo apt-get install -y ipython

@@ -11,5 +11,5 @@ graceful_timeout = 30
 keepalive = 5
 debug = True
 daemon = True
-accesslog = "/logs/gunicorn_access.log"
-errorlog = "/logs/gunicorn_error.log"
+accesslog = "/applogs/gunicorn_access.log"
+errorlog = "/applogs/gunicorn_error.log"
