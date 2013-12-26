@@ -6,8 +6,10 @@ from flask.ext.restful import reqparse
 from helpers import Instagram
 from Variables import CLIENT_ID, CLIENT_SECRET
 import json
+from custom_logging import app_logger
 
 app = Flask(__name__)
+app.config.from_pyfile('configs/flask_config.py')
 api = Api(app)
 
 
@@ -98,5 +100,6 @@ api.add_resource(ImagesByTag, '/ImagesByTag')
 		
 		
 if __name__ == "__main__":
-	app.run(host="localhost", port= 5000, debug = True)
+	app_logger(app)
+	app.run(host="localhost",  port= 5000)
 
